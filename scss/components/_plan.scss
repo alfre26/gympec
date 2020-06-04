@@ -1,0 +1,77 @@
+.plan-container {
+  background: $background-color;
+  padding: 20px;
+  .plan {
+    margin: auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .text {
+      .title {
+        margin-top: 40px;
+        font-family: $font-raleway;
+        font-weight: $semiBold;
+        font-size: 32px;
+        color: $primary;
+
+        strong {
+          color: rgba(0, 0, 0, 0.589);
+        }
+      }
+    }
+
+    .card {
+      margin: 10% 0;
+      text-align: center;
+      padding: 10px 40px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.035),
+        0 100px 80px rgba(0, 0, 0, 0.07);
+
+      .title {
+        margin-top: 20px;
+        font-family: $font-roboto;
+        font-size: 24px;
+        font-weight: $bold;
+      }
+      .line {
+        height: 2px;
+        background: $primary;
+        margin: 10% 0;
+      }
+
+      .description {
+        line-height: 2;
+        font-family: $font-roboto;
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+      .price {
+        font-family: $font-roboto;
+        font-weight: $bold;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      .btn {
+        cursor: pointer;
+        outline: none;
+        border: none;
+        color: $text-color;
+        background: $primary;
+        font-family: $font-raleway;
+        font-weight: $bold;
+        padding: 5px 0px;
+        border-radius: 5px;
+        width: 150px;
+        margin-bottom: 30px;
+        border: 1px solid $primary;
+      }
+      .btn:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
+  }
+}

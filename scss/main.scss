@@ -1,0 +1,12 @@
+@import "./components/config";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import "./components/navbar";
+@import "./components/hero";
+@import "./components/offers";
+@import "./components/about";
+@import "./components/plan";
+@import "./components/footer";

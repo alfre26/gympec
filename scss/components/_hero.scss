@@ -1,0 +1,45 @@
+.hero-container {
+  background: $black;
+  padding: 20px;
+  .hero {
+    margin: auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    .title {
+      margin-top: 40px;
+      text-align: center;
+      color: $text-color;
+      font-size: 28px;
+      font-family: $font-maven;
+      text-transform: uppercase;
+    }
+    .description {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.671);
+      margin: 25px 5%;
+      font-size: 12px;
+      font-family: $font-raleway;
+      line-height: 1.7;
+    }
+    .btn {
+      cursor: pointer;
+      outline: none;
+      border: none;
+      color: $text-color;
+      background: $primary;
+      font-family: $font-raleway;
+      font-weight: $bold;
+      padding: 5px 0px;
+      border-radius: 5px;
+      width: 150px;
+      margin-bottom: 100px;
+      border: 1px solid $primary;
+    }
+    .btn:hover {
+      background: #282828;
+    }
+  }
+}

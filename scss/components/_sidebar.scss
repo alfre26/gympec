@@ -18,6 +18,7 @@
 .sidebar {
   background: #282828;
   height: 100%;
+  width: 100%;
 
   a {
     text-decoration: none;
@@ -30,13 +31,13 @@
     justify-content: center;
     align-items: center;
     font-family: $font-roboto;
-    margin-top: 100px;
+    margin-top: 50px;
   }
   a:hover {
     color: #f1f1f1a4;
   }
   .logo {
-    width: 20%;
+    width: 25%;
     transform: translateX(1.8em) translateY(2em);
     margin: 30px 0;
   }

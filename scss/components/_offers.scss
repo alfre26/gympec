@@ -23,7 +23,7 @@
       }
 
       .description {
-        color: rgba(0, 0, 0, 0.671);
+        color: rgba(0, 0, 0, 0.479);
         margin: 20px 5%;
         font-size: 12px;
         font-family: $font-raleway;
@@ -58,6 +58,60 @@
         i {
           color: $primary;
         }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .offers-container {
+    margin-top: 450px;
+    .offers {
+      .text {
+        .title {
+          font-size: 50px;
+        }
+        .description {
+          font-size: 16px;
+          margin: 20px 50px;
+        }
+      }
+
+      .row {
+        width: 520px;
+        .group {
+          font-size: 18px;
+          color: rgba(0, 0, 0, 0.514);
+          font-weight: $bold;
+        }
+        .circle {
+          height: 28px;
+          width: 28px;
+          padding: 30px;
+        }
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .offers-container {
+    padding: 70px;
+    margin-top: 790px;
+    .offers {
+      .text {
+        .title {
+          font-size: 60px;
+        }
+        .description {
+          margin: 20px 50px;
+        }
+      }
+
+      .row {
+        width: 700px;
       }
     }
   }

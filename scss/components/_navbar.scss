@@ -1,5 +1,5 @@
 .nav-container {
-  padding: 25px;
+  padding: 25px 0;
   background: $black;
 
   .nav {
@@ -10,8 +10,7 @@
     align-items: center;
 
     .logo {
-      width: 30%;
-      max-width: 100px;
+      width: 20%;
       cursor: pointer;
     }
     .links {
@@ -42,6 +41,75 @@
         height: 2px;
         width: 25px;
         transform: translateY(0.4em);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-container {
+    padding: 20px;
+    background: none;
+    z-index: 100;
+    position: sticky;
+    .nav {
+      max-width: 900px;
+
+      .logo {
+        width: 15%;
+        margin-right: 20em;
+      }
+
+      .hamburger {
+        width: 20px;
+        padding: 20px;
+        .line {
+          height: 3px;
+          width: 30px;
+        }
+        .line::before {
+          height: 3px;
+          width: 30px;
+          transform: translateY(-0.45em);
+        }
+        .line::after {
+          height: 3px;
+          width: 30px;
+          transform: translateY(0.45em);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .nav-container {
+    .nav {
+      max-width: 1440px;
+      padding: 20px;
+      .logo {
+        width: 11%;
+        margin-right: 40em;
+      }
+      .links {
+        display: block;
+        display: flex;
+
+        .link {
+          cursor: pointer;
+          color: $text-color;
+          list-style: none;
+          padding: 0 15px;
+          font-size: 20px;
+          font-family: $font-roboto;
+          font-weight: $bold;
+        }
+        .link:hover {
+          color: rgba(255, 255, 255, 0.74);
+        }
+      }
+      .hamburger {
+        display: none;
       }
     }
   }

@@ -6,6 +6,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .right {
+      display: none;
+    }
     .text {
       margin-top: 30px;
       text-align: center;
@@ -22,11 +25,100 @@
       }
 
       .description {
-        color: rgba(0, 0, 0, 0.671);
+        color: rgba(0, 0, 0, 0.479);
         margin: 20px 5%;
         font-size: 12px;
         font-family: $font-raleway;
         line-height: 1.7;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .about-container {
+    position: relative;
+    overflow: hidden;
+    .about {
+      max-width: 900px;
+      display: flex;
+      flex-direction: row;
+      .right {
+        display: block;
+
+        .img-1 {
+          position: absolute;
+          width: 15%;
+          transform: translateX(-16em) translateY(-10em);
+          max-width: 130px;
+        }
+        .img-2 {
+          position: absolute;
+          width: 15%;
+          transform: translateX(-10em) translateY(-1.9em);
+          max-width: 130px;
+        }
+        .img-3 {
+          display: none;
+        }
+      }
+      .text {
+        text-align: left;
+        padding: 20px;
+
+        .title {
+          transform: translateX(1em);
+          font-size: 50px;
+        }
+
+        .description {
+          font-size: 16px;
+          padding: 0px 130px;
+          transform: translateX(-7em);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1300px) {
+  .about-container {
+    padding: 90px 0px;
+    .about {
+      max-width: 1440px;
+      .right {
+        display: block;
+        padding: 40px;
+        .img-1 {
+          width: 12%;
+          transform: translateX(-28em) translateY(-15em);
+          max-width: 165px;
+        }
+        .img-2 {
+          width: 12%;
+          transform: translateX(-28em) translateY(1.2em);
+          max-width: 165px;
+        }
+        .img-3 {
+          position: absolute;
+          display: block;
+          width: 12%;
+          transform: translateX(-16em) translateY(-7em);
+          max-width: 165px;
+        }
+      }
+      .text {
+        text-align: left;
+        margin-right: 20em;
+
+        .title {
+          transform: translateX(1em);
+          font-size: 60px;
+        }
+
+        .description {
+          font-size: 20px;
+          padding: 0px 130px;
+          transform: translateX(-6em);
+        }
       }
     }
   }

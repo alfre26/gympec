@@ -20,57 +20,162 @@
         }
       }
     }
-
-    .card {
-      margin: 10% 0;
-      text-align: center;
-      padding: 10px 40px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.035),
-        0 100px 80px rgba(0, 0, 0, 0.07);
-
-      .title {
-        margin-top: 20px;
-        font-family: $font-roboto;
-        font-size: 24px;
-        font-weight: $bold;
-      }
-      .line {
-        height: 2px;
-        background: $primary;
+    .card-container {
+      .card {
         margin: 10% 0;
+        text-align: center;
+        padding: 10px 40px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.035),
+          0 100px 80px rgba(0, 0, 0, 0.07);
+
+        .title {
+          margin-top: 20px;
+          font-family: $font-roboto;
+          font-size: 24px;
+          font-weight: $bold;
+        }
+        .line {
+          height: 2px;
+          background: $primary;
+          margin: 10% 0;
+        }
+
+        .description {
+          line-height: 2;
+          font-family: $font-roboto;
+          font-size: 16px;
+          margin-bottom: 30px;
+        }
+        .price {
+          font-family: $font-roboto;
+          font-weight: $bold;
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+        .btn {
+          cursor: pointer;
+          outline: none;
+          border: none;
+          color: $text-color;
+          background: $primary;
+          font-family: $font-raleway;
+          font-weight: $bold;
+          padding: 5px 0px;
+          border-radius: 5px;
+          width: 150px;
+          margin-bottom: 30px;
+          border: 1px solid $primary;
+        }
+        .btn:hover {
+          background: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .plan-container {
+    .plan {
+      max-width: 900px;
+      .text {
+        .title {
+          font-size: 50px;
+        }
       }
 
-      .description {
-        line-height: 2;
-        font-family: $font-roboto;
-        font-size: 16px;
-        margin-bottom: 30px;
+      .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: 5%;
+        .card.starter {
+          .price {
+            margin-top: 32px;
+          }
+        }
+        .card.pro {
+          padding: 20px;
+        }
+
+        .card {
+          padding: 5px;
+          margin: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .line {
+            height: 2px;
+            width: 200px;
+          }
+        }
       }
-      .price {
-        font-family: $font-roboto;
-        font-weight: $bold;
-        font-size: 20px;
-        margin-bottom: 15px;
+    }
+  }
+}
+@media (min-width: 1300px) {
+  .plan-container {
+    .plan {
+      max-width: 1440px;
+      .text {
+        .title {
+          font-size: 60px;
+        }
       }
-      .btn {
-        cursor: pointer;
-        outline: none;
-        border: none;
-        color: $text-color;
-        background: $primary;
-        font-family: $font-raleway;
-        font-weight: $bold;
-        padding: 5px 0px;
-        border-radius: 5px;
-        width: 150px;
-        margin-bottom: 30px;
-        border: 1px solid $primary;
-      }
-      .btn:hover {
-        background: #fff;
-        color: #000;
+
+      .card-container {
+        height: 600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "starter pro basic";
+        .card {
+          box-shadow: 0 8px 5.3px rgba(0, 0, 0, 0.081),
+            0 26.8px 17.9px rgba(0, 0, 0, 0.119),
+            0 120px 80px rgba(0, 0, 0, 0.2);
+        }
+        .card.starter {
+          grid-area: starter;
+          padding: 10px;
+          height: 425px;
+          transform: translateY(2.5em) translateX(1em);
+
+          .btn {
+            background: #fff;
+            color: $black;
+          }
+          .btn:hover {
+            background: $primary;
+            color: #fff;
+          }
+        }
+        .card.pro {
+          grid-area: pro;
+          padding: 30px;
+          height: 450px;
+
+          .price {
+            margin-top: 30px;
+          }
+        }
+        .card.basic {
+          grid-area: basic;
+          height: 440px;
+          transform: translateY(2em) translateX(-1em);
+          .price {
+            margin-top: 10px;
+          }
+          .btn {
+            background: #fff;
+            color: $black;
+          }
+          .btn:hover {
+            background: $primary;
+            color: #fff;
+          }
+        }
       }
     }
   }
